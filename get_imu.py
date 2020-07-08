@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding=utf-8 
 """
     xtark_python_demo/get_imu.py - Version 1.0 @XTARK
     

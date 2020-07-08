@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding=utf-8 
 """
     xtark_python_demo/set_params.py - Version 1.0 @XTARK
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding=utf-8 
 """
     xtark_python_demo/run_position.py
     
