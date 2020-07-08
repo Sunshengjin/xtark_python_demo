@@ -1,12 +1,20 @@
 #!/usr/bin/env python
+"""
+    xtark_python_demo/run_teleop.py - Version 1.0 @XTARK
+    
+    Copyright (c) 2020 XTARK.  All rights reserved.
 
-from geometry_msgs.msg import Twist
+    ·XMiddleWare接口库(XTARK机器人接口库)
+    ·--例程：机器人键盘控制移动简单实现
+    
+"""
 
 import sys, select, termios, tty,time
 
-import XMiddleWare as xmw
+import XMiddleWare as xmw   #导入XMiddleWare  XTARK机器人接口库
 
-msg = """
+# 提示信息打印
+msg = """                                                      
 Reading from the keyboard  and ControlRobot!
 ---------------------------
 Moving around:
@@ -32,7 +40,7 @@ e/c : increase/decrease only angular speed by 10%
 CTRL-C to quit
 """
 
-moveBindings = {
+moveBindings = {            #移动控制键位绑定表
         'i':(1,0,0,0),
         'o':(1,0,0,-1),
         'j':(0,0,0,1),
@@ -57,7 +65,7 @@ moveBindings = {
         'D':(0,0,0,1),
     }
 
-speedBindings={
+speedBindings={            #速度大小控制键位绑定表
         'q':(1.1,1.1),
         'z':(.9,.9),
         'w':(1.1,1),
@@ -66,7 +74,7 @@ speedBindings={
         'c':(1,.9),
     }
 
-def getKey():
+def getKey():                               #读取键盘输入函数
     tty.setraw(sys.stdin.fileno())
     select.select([sys.stdin], [], [], 0)
     key = sys.stdin.read(1)
@@ -87,22 +95,22 @@ if __name__=="__main__":
     th = 0
     status = 0
 
-    robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)
-    robot.Init()
-    time.sleep(0.5)
+    robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)      # 建立 XTARK 机器人连接对象
+    robot.Init()                                        # 初始化 XTARK 机器人连接
+    time.sleep(0.5)                                     # 延时等待连接稳定
 
 
     try:
         print(msg)
         print(vels(speed,turn))
         while(1):
-            key = getKey()
-            if key in moveBindings.keys():
+            key = getKey()                              # 获取键盘输入
+            if key in moveBindings.keys():              # 查询输入键位是否为移动控制
                 x = moveBindings[key][0]
                 y = moveBindings[key][1]
                 z = moveBindings[key][2]
                 th = moveBindings[key][3]
-            elif key in speedBindings.keys():
+            elif key in speedBindings.keys():           # 查询输入键位是否为速度增减控制
                 speed = speed * speedBindings[key][0]
                 turn = turn * speedBindings[key][1]
 
@@ -110,7 +118,7 @@ if __name__=="__main__":
                 if (status == 14):
                     print(msg)
                 status = (status + 1) % 15
-            else:
+            else:                                       # 查询不匹配，停止机器人
                 x = 0
                 y = 0
                 z = 0
@@ -118,7 +126,7 @@ if __name__=="__main__":
                 if (key == '\x03'):
                     break
             
-            robot.SetVelocity(x*speed,y*speed,th*turn)
+            robot.SetVelocity(x*speed,y*speed,th*turn)  # 根据键位输入移动机器人
     
     except Exception as e:
         print(e)
