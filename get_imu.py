@@ -7,7 +7,11 @@
 
     ·XMiddleWare接口库(XTARK机器人接口库)
     ·--IMU数据接口:  GetIMU()
+<<<<<<< HEAD
     ·--返回数据格式(list)： [陀螺仪Roll(rad/s)，陀螺仪Pitch(rad/s)，陀螺仪Yaw(rad/s)，线加速度X(m/s2)，线加速度Y(m/s2)，线加速度Z(m/s2)，姿态角Roll(rad)，姿态角Pitch(rad)，姿态角Yaw(rad)]
+=======
+    ·--返回数据格式(list)： [陀螺仪Roll，陀螺仪Pitch，陀螺仪Yaw，线加速度X，线加速度Y，线加速度Z，姿态角Roll，姿态角Pitch，姿态角Yaw]
+>>>>>>> 1e265f7e0b9079c6682581eb9c09cad13d718bef
     
 """
 import XMiddleWare as xmw #导入XMiddleWare  XTARK机器人接口库
@@ -24,7 +28,11 @@ try:
         print("  ")
         print("Gyro_roll: %.3f,   Gyro_pitch: %.3f,  Gyro_yaw: %.3f" % (imu[0],imu[1],imu[2])) # 打印陀螺仪数据
         print("Acc_x: %.3f,        Acc_y: %.3f,      Acc_z: %.3f" % (imu[3],imu[4],imu[5]))    # 打印线加速度数据
+<<<<<<< HEAD
         print("Angle_roll: %.3f,  Angle_pitch: %.3f,  Angle_yaw: %.3f" % (imu[6],imu[7],imu[8]))   # 打印角度数据
+=======
+        print("Angle_roll: %.3f,  Acc_pitch: %.3f,  Acc_yaw: %.3f" % (imu[6],imu[7],imu[8]))   # 打印角度数据
+>>>>>>> 1e265f7e0b9079c6682581eb9c09cad13d718bef
         time.sleep(0.05)
 
 except KeyboardInterrupt:

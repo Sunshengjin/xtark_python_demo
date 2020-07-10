@@ -7,7 +7,11 @@
 
     ·XMiddleWare接口库(XTARK机器人接口库)
     ·--Odom里程计数据接口:  GetOdom()
+<<<<<<< HEAD
     ·--返回数据格式(list)： [里程计X坐标(m)，里程计Y坐标(m)，里程计Yaw角度(rad)，机器人X轴线速度(m/s)，机器人Y轴线速度(m/s)，机器人Yaw轴角度(rad/s)]
+=======
+    ·--返回数据格式(list)： [里程计X坐标，里程计Y坐标，里程计Yaw角度，机器人X轴线速度，机器人Y轴线速度，机器人Yaw轴角度]
+>>>>>>> 1e265f7e0b9079c6682581eb9c09cad13d718bef
 
 """
 import XMiddleWare as xmw   #导入XMiddleWare XTARK机器人接口库

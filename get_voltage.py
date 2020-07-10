@@ -7,7 +7,11 @@
 
     ·XMiddleWare接口库(XTARK机器人接口库)
     ·--IMU数据接口:  GetBattery()
+<<<<<<< HEAD
     ·--返回数据格式(double)： 电池电压值(V)
+=======
+    ·--返回数据格式(double)： 电池电压值
+>>>>>>> 1e265f7e0b9079c6682581eb9c09cad13d718bef
 
 """
 import XMiddleWare as xmw #导入XMiddleWare  XTARK机器人接口库
