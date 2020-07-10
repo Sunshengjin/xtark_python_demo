@@ -1,6 +1,14 @@
 #!/usr/bin/env python
+# coding=utf-8 
 """
     xtark_python_demo/set_wheelspeed.py - Version 1.0 @XTARK
+     
+    Copyright (c) 2020 XTARK.  All rights reserved.
+
+    ·XMiddleWare接口库(XTARK机器人接口库)
+    ·--轮速设置接口:  SetWheelSpeed(A轮速度，B轮速度，C轮速度，D轮速度)
+    ·--速度单位：  每PID周期（25hz）内轮子编码器期望变化值
+    ·--此速度为PID闭环控制
 
 """
 import XMiddleWare as xmw
