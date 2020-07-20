@@ -26,14 +26,14 @@ robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)  # 导入XMiddleWare  XTARK机器
 robot.Init()                                    # 建立 XTARK 机器人连接对象
 print("Connecting Robot!")
 time.sleep(1)                                   # 延时等待连接稳定
-robot_type_           = 0
-encoder_resolution_   = 1440
-wheel_diameter_       = 0.097
-robot_linear_acc_     = 1.5
-robot_angular_acc_    = 2.0
-wheel_track_          = 0.315
-wheel_a_mec_          = 0.095
-wheel_b_mec_          = 0.075
+robot_type_           = 0                       # 设置底盘运动模型为麦克纳姆轮
+encoder_resolution_   = 1440                    # 设置底盘编码器分辨率
+wheel_diameter_       = 0.097                   # 设置底盘轮径
+robot_linear_acc_     = 1.5                     # 设置线加速度
+robot_angular_acc_    = 2.0                     # 设置角加速度
+wheel_track_          = 0.315                   # 设置轮距（差速地盘）
+wheel_a_mec_          = 0.095                   # 设置左右轮距（麦轮底盘）
+wheel_b_mec_          = 0.075                   # 设置前后轮距（麦轮底盘）
 print("Set Robot Params: ")
 print("--Set Robot Type:         %d  (0-Mecnum 1-Diff)" % (robot_type_))
 print("--Set Encoder Resolution: %d " % (encoder_resolution_))

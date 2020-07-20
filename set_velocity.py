@@ -20,20 +20,20 @@ print("Connecting Robot!")
 time.sleep(1)                                   # 延时等待连接稳定
 
 print("Set Speed: x: 0.5m/s y: 0.0m/s yaw: 0.0rad/s")
-robot.SetVelocity(0.5,0,0)                      # 设置机器人速度
+robot.SetVelocity(0.5,0,0)                      # 设置机器人速度,前进0.5m/s
 time.sleep(1)
 print("Stop Robot!")
-robot.SetVelocity(0,0,0)
+robot.SetVelocity(0,0,0)                        # 停止机器人
 time.sleep(1)
 print("Set Speed: x: 0.0m/s y: 0.5m/s yaw: 0.0rad/s")
-robot.SetVelocity(0,0.5,0)
+robot.SetVelocity(0,0.5,0)                      # 设置机器人速度，平移0.5m/s
 time.sleep(1)
 print("Stop Robot!")
-robot.SetVelocity(0,0,0)
+robot.SetVelocity(0,0,0)                        # 停止机器人
 time.sleep(1)
 print("Set Speed: x: 0.0m/s y: 0.0m/s yaw: 1.0rad/s")
-robot.SetVelocity(0,0,1.0)
+robot.SetVelocity(0,0,1.0)                      # 设置机器人速度，旋转1.0rad/s
 time.sleep(1)
 print("Stop Robot!")
-robot.SetVelocity(0,0,0)
+robot.SetVelocity(0,0,0)                        # 停止机器人
 pass

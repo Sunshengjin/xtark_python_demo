@@ -8,8 +8,6 @@
     ·XMiddleWare接口库(XTARK机器人接口库)
     ·--IMU数据接口:  GetIMU()
     ·--返回数据格式(list)： [陀螺仪Roll(rad/s)，陀螺仪Pitch(rad/s)，陀螺仪Yaw(rad/s)，线加速度X(m/s2)，线加速度Y(m/s2)，线加速度Z(m/s2)，姿态角Roll(rad)，姿态角Pitch(rad)，姿态角Yaw(rad)]
-    ·--返回数据格式(list)： [陀螺仪Roll，陀螺仪Pitch，陀螺仪Yaw，线加速度X，线加速度Y，线加速度Z，姿态角Roll，姿态角Pitch，姿态角Yaw]
-    
 """
 import XMiddleWare as xmw #导入XMiddleWare  XTARK机器人接口库
 import time         

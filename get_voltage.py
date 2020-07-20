@@ -6,7 +6,7 @@
     Copyright (c) 2020 XTARK.  All rights reserved.
 
     ·XMiddleWare接口库(XTARK机器人接口库)
-    ·--IMU数据接口:  GetBattery()
+    ·--电池数据接口:  GetBattery()
     ·--返回数据格式(double)： 电池电压值(V)
 
 """
