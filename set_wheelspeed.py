@@ -14,7 +14,7 @@
 import XMiddleWare as xmw       #导入 XMiddleWare XTARK 机器人接口库
 import time
 
-robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)          # 建立XTARK机器人连接对象
+robot = xmw.XMiddleWare("/dev/ttyAMA0",115200)          # 建立XTARK机器人连接对象
 robot.Init()                                            # 初始化XTARK机器人连接
 print("Connecting Robot!")
 time.sleep(1)                                           # 延时等待连接稳定

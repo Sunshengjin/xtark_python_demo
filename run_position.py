@@ -14,11 +14,11 @@
 import XMiddleWare as xmw    # 导入XMiddleWare  XTARK机器人接口库
 import time
 
-robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)  # 建立 XTARK 机器人连接对象
+robot = xmw.XMiddleWare("/dev/ttyAMA0",115200)  # 建立 XTARK 机器人连接对象
 robot.Init()                                    # 初始化 XTARK 机器人连接
 print(" Connecting Robot!")
 time.sleep(1)
-robot.SetParams(robot_type=0)                   # 初始化机器人里程计，并设置机器人为麦克纳姆轮
+robot.SetParams()                   # 初始化机器人里程计，并设置机器人为麦克纳姆轮
 time.sleep(1)
 
 

@@ -96,7 +96,7 @@ if __name__=="__main__":
     th = 0
     status = 0
 
-    robot = xmw.XMiddleWare("/dev/ttyTHS1",115200)      # 建立 XTARK 机器人连接对象
+    robot = xmw.XMiddleWare("/dev/ttyAMA0",115200)      # 建立 XTARK 机器人连接对象
     robot.Init()                                        # 初始化 XTARK 机器人连接
     time.sleep(0.5)                                     # 延时等待连接稳定
 
